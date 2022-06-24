@@ -1,0 +1,32 @@
+.brandCon{
+    width: 40px;
+    height: 40px;
+}
+.brandTxt{
+    color: #3730A3;
+    transform: rotate(25deg);
+}
+.navBtn{
+    color: #3730A3 !important;
+    border-color: #3730A3 !important;
+    width: fit-content;
+}
+.navBtn:hover{
+    background-color: #3730A3 !important;
+    border-color: #3730A3 !important;
+    color: #fff !important;
+}
+.navBtn:focus, .navBtn:active{
+    background-color: #3730A3 !important;
+    border-color: #3730A3 !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.25rem #3730a369 !important;
+}
+
+
+.fixedNav{
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+}

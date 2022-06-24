@@ -1,0 +1,42 @@
+.project{
+    /* box-shadow: -5px 5px 20px #3730a399; */
+    animation: myproject 2s infinite;
+    transition: all ease 0.5s;
+    max-width: 45%;
+    margin :0 0.25rem;
+}
+
+@keyframes  myproject{
+    50% {box-shadow: -5px 5px 20px #3730a399; margin:0 1rem;}
+}
+
+@media (max-width:768px){
+    @keyframes  myproject{
+        50% {box-shadow: -5px 5px 20px #3730a399; margin:0 0.55rem;}
+    }
+    .project{
+        max-width: 90%;
+    }
+}
+
+@keyframes myTitle{
+    50% {bottom: 0%; opacity: 0.7;}
+}
+
+.projectLink{
+    background: linear-gradient(rgb(248, 250, 253) 15%, rgba(248, 250, 253, 0) 413px);
+    bottom: 4%;
+    left: 12.5%;
+    display: none;
+    opacity: 1;
+}
+
+.project:hover .projectLink{
+    display: flex;
+    animation: myTitle 1s forwards;
+
+}
+.project:hover{
+    transform: scale(1.1);
+    z-index: 1000;
+}
