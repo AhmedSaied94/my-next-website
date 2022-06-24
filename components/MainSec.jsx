@@ -45,6 +45,7 @@ const MainSec = () => {
         <Image
           className={`${styles.mainImg} mx-auto w-100 mt-3 mt-md-0`}
           src="/main.jpg"
+          alt="ahmed saied"
         />
       </Col>
     </Row>
