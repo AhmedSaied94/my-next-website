@@ -16,9 +16,9 @@ const MainSec = () => {
             Full Stack Web Developer Python / Django / React.js / Next.js
           </h1>
           <p className="text-secondary">
-            Hello, I'm Ahmed Saied, a full stack web developer i build a full
+            {`Hello, I'm Ahmed Saied, a full stack web developer i build a full
             modern website from a to z with latest technologies, lets shake
-            hands with me
+            hands with me`}
           </p>
           <Stack direction="horizontal" gap={2}>
             <a href="#contactme">
@@ -33,7 +33,7 @@ const MainSec = () => {
           </Stack>
           <hr className="m-0" />
           <p className={`text-secondary m-0 ${styles.span}`}>
-            I'm currently open for full time or part time work
+            {`I'm currently open for full time or part time work`}
           </p>
         </Stack>
       </Col>
