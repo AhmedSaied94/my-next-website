@@ -38,7 +38,7 @@ export default function Home({projects}) {
 
 export async function getServerSideProps (context)  {
 
-  const res = await axios.get('https://9978-102-11-95-32.ngrok.io/projects/');
+  const res = await axios.get('https://ahmed-saied-django.herokuapp.com/projects/');
   
   const projects = res.data
   return {

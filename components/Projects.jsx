@@ -12,7 +12,10 @@ const Projects = ({ projects }) => {
       <div className="py-2 d-flex flex-wrap justify-content-center align-items-stretch">
         {projects.map((project) => {
           return (
-            <div className={`${styles.project} my-4 position-relative rounded`}>
+            <div
+              key={project.id}
+              className={`${styles.project} my-4 position-relative rounded`}
+            >
               <Image
                 className="w-100 h-100 rounded"
                 src={`${project.main_preview}`}
