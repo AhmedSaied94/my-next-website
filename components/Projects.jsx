@@ -17,6 +17,7 @@ const Projects = ({ projects }) => {
               className={`${styles.project} my-4 position-relative rounded`}
             >
               <Image
+                alt={project.title}
                 className="w-100 h-100 rounded"
                 src={`${project.main_preview}`}
               />
