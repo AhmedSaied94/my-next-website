@@ -36,7 +36,7 @@ export default function Home({ projects }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await axios.get("http://54.201.74.210/api/projects/");
+  const res = await axios.get("http://ahmed-saeed.site/api/projects/");
 
   const projects = res.data;
   return {
