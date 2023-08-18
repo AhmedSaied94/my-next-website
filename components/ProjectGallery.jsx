@@ -2,6 +2,7 @@ import { Carousel } from "react-bootstrap";
 import styles from "../styles/ProjectGallery.module.css";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
+import { BaseUrl } from "./BaseeUrl";
 
 const ProjectGallery = ({ gallery, projectName }) => {
     return (
@@ -11,7 +12,7 @@ const ProjectGallery = ({ gallery, projectName }) => {
             <Carousel.Item key={image.id}>
                 <img
                 className={`d-block w-100 ${styles.gallery}`}
-                src={`${image.image}`}
+                src={`${BaseUrl}${image.image?.slice(1)}`}
                 alt={image.title}
                 />
                 <Carousel.Caption className={styles.caption + "  bg-secondary bg-opacity-50"}>
