@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 import axios from "axios";
 import React from "react";
 import ContactMe from "../components/ContactMe";
-
+import { BaseUrl } from "../components/BaseeUrl";
 export default function Home({ projects }) {
   // const [projects, setProjects] = React.useState([])
   // React.useEffect(()=>{
@@ -36,7 +36,7 @@ export default function Home({ projects }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await axios.get("https://ahmed-saeed.site/api/projects/");
+  const res = await axios.get(`${BaseUrl}api/projects/`);
 
   const projects = res.data;
   return {

@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Image } from "react-bootstrap";
 import styles from "../styles/Projects.module.css";
 import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
 
 const Projects = ({ projects }) => {
   return (
@@ -25,8 +26,12 @@ const Projects = ({ projects }) => {
                 id="projectLink"
                 className={`${styles.projectLink} fw-bolder h-25 w-75 p-4 justify-content-between align-items-center position-absolute`}
               >
-                <p className="m-0">{project.title}</p>
-                <BsArrowRight />
+                <Link href={`/projects/${project.id}`}>
+                  <p className="m-0"  role="button">{project.title}</p>
+                </Link>
+                <Link href={`/projects/${project.id}`} role="button">
+                  <BsArrowRight />
+                </Link>
               </div>
             </div>
           );

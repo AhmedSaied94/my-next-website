@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import styles from "../styles/Navbar.module.css";
-
+import Link from "next/link";
 const NavBar = () => {
   return (
     <Navbar className={`fixed-top p-3`} bg="white" expand="lg">
@@ -16,19 +16,27 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link className="mx-md-3 align-self-lg-center" href="#main">
+            <Link href="/#main" >
+              < a className="mx-md-3 align-self-lg-center nav-link" >
               Home
-            </Nav.Link>
-            <Nav.Link className="mx-md-3 align-self-lg-center" href="#services">
+              </a>
+            </Link>
+            <Link href="/#services" >
+              < a className="mx-md-3 align-self-lg-center nav-link" >
               Services
-            </Nav.Link>
-            <Nav.Link className="mx-md-3 align-self-lg-center" href="#works">
+              </a>
+            </Link>
+            <Link href="/#works" >
+              < a className="mx-md-3 align-self-lg-center nav-link" >
               Works
-            </Nav.Link>
-            <Nav.Link className="mx-md-3 align-self-lg-center" href="#main">
+              </a>
+            </Link>
+            {/* <Link href="/#about" >
+              < a className="mx-md-3 align-self-lg-center nav-link" >
               About
-            </Nav.Link>
-            <Nav.Link className="ms-md-3 " href="#contactme">
+              </a>
+            </Link> */}
+            <Link href="/#contactme" >
               <Button
                 className={`${styles.navBtn} px-4 py-1  fs-6`}
                 variant="outline-primary"
@@ -37,7 +45,7 @@ const NavBar = () => {
               >
                 Hire me
               </Button>
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
