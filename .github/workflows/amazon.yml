@@ -73,7 +73,7 @@ jobs:
             SSH_AUTH_SOCK: /tmp/ssh_agent.sock 
         run: \
             scp -i ~/.ssh/live.pem -o StrictHostKeyChecking=no -r ./next ${{ secrets.INSTANCE_USER }}@${{ secrets.INSTANCE_IP }}:/home/${{ secrets.INSTANCE_USER }}/my_website/my-next-website
-            ssh -i ~/.ssh/live.pem -o StrictHostKeyChecking=no ${{ secrets.INSTANCE_USER }}@${{ secrets.INSTANCE_IP }} << END
+            ssh -i ~/.ssh/live.pem -o StrictHostKeyChecking=no ${{ secrets.INSTANCE_USER }}@${{ secrets.INSTANCE_IP }} << "ENDSSH"
                 cd /home/${{ secrets.INSTANCE_USER }}/my_website/my-next-website
                 pm2 stop all
                 pm2 start npm --name "my-next-website" -- start
