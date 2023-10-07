@@ -3,6 +3,7 @@ import styles from "../styles/ProjectGallery.module.css";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { BaseUrl } from "./BaseeUrl";
+import Image from "next/image";
 
 const ProjectGallery = ({ gallery, projectName }) => {
     return (
@@ -10,7 +11,7 @@ const ProjectGallery = ({ gallery, projectName }) => {
         {gallery.images.map((image, i) => {
             return (
             <Carousel.Item key={image.id}>
-                <img
+                <Image
                 className={`d-block w-100 ${styles.gallery}`}
                 src={`${BaseUrl}${image.image?.slice(1)}`}
                 alt={image.title}
