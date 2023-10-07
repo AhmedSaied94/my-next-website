@@ -77,8 +77,8 @@ jobs:
                 cd /home/${{ secrets.INSTANCE_USER }}/my_website/my-next-website
                 pm2 stop all
                 pm2 start npm --name "my-next-website" -- start
-                # pm2 startup
+                pm2 startup
                 pm2 save
-            END
+            ENDSSH
 
 
