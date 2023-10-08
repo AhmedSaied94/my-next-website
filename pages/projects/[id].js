@@ -21,8 +21,7 @@ function Project({project}) {
                         project.gallery.images.length > 0 ?
                             <ProjectGallery gallery={project.gallery} projectName={project.title} />
                             :
-                        <Image src={`/media${project.main_preview?.split("media")[1]}`} layout="responsive" 
-                        alt={project.title} className="img-fluid" />
+                        <Image src={project.main_preview} alt={project.title} className="img-fluid" />
                     }
                 </div>
                 <div className="col-12 ">
