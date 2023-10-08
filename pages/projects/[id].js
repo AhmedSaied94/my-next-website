@@ -3,6 +3,7 @@ import axios from "axios";
 import { BaseUrl } from "../../components/BaseeUrl"
 import ProjectGallery from "../../components/ProjectGallery";
 import ContactMe from "../../components/ContactMe";
+import Image from "next/image";
 
 
 function Project({project}) {
@@ -20,7 +21,7 @@ function Project({project}) {
                         project.gallery.images.length > 0 ?
                             <ProjectGallery gallery={project.gallery} projectName={project.title} />
                             :
-                        <img src={project.main_preview} alt={project.title} className="img-fluid" />
+                        <Image src={project.main_preview} alt={project.title} className="img-fluid" />
                     }
                 </div>
                 <div className="col-12 ">
