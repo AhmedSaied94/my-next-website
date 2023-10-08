@@ -13,7 +13,7 @@ const ProjectGallery = ({ gallery, projectName }) => {
             <Carousel.Item key={image.id}>
                 <Image
                 className={`d-block w-100 ${styles.gallery}`}
-                loader={({ src }) => `${BaseUrl}${src}`}
+                loader={() => BaseUrl + image.image}
                 src={`${image.image?.slice(1)}`}
                 alt={image.title}
                 />
