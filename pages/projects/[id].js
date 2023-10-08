@@ -21,7 +21,9 @@ function Project({project}) {
                         project.gallery.images.length > 0 ?
                             <ProjectGallery gallery={project.gallery} projectName={project.title} />
                             :
-                        <Image src={`/media${project.main_preview?.split("media")[1]}`} layout="responsive" 
+                        <Image 
+                            loader={({ src, width, quality }) => `${BaseUrl}${src}?w=${width}&q=${quality || 75}`}
+                        src={`media${project.main_preview?.split("media")[1]}`} layout="responsive" 
                         alt={project.title} className="img-fluid" />
                     }
                 </div>
